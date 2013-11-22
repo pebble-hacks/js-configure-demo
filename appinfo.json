@@ -1,0 +1,18 @@
+{
+  "uuid": "4145256f-4776-4a0c-a172-31b7a1d82195",
+  "shortName": "Configurable",
+  "longName": "Configurable",
+  "companyName": "MakeAwesomeHappen",
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "capabilities": [ "configurable" ],
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
