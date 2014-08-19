@@ -18,6 +18,6 @@ Pebble.addEventListener("webviewclosed", function(e) {
     options = JSON.parse(decodeURIComponent(e.response));
     console.log("Options = " + JSON.stringify(options));
   } else {
-    console.log("Canceled");
+    console.log("Cancelled");
   }
 });
