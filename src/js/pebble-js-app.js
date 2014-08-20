@@ -14,7 +14,8 @@ Pebble.addEventListener("showConfiguration", function() {
 Pebble.addEventListener("webviewclosed", function(e) {
   console.log("configuration closed");
   // webview closed
-  if (e.response != "{}") {
+	//Using primitive JSON validity and non-empty check
+	if (e.response.charAt(0) == "{" && e.response.slice(-1) == "}" && e.response.length > 5) {
     options = JSON.parse(decodeURIComponent(e.response));
     console.log("Options = " + JSON.stringify(options));
   } else {
