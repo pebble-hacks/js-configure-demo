@@ -58,14 +58,11 @@
     </div>
     <script>
       function saveOptions() {
-        var options = {
-          'name': $("#name").val(),
-          'special-feature': $("#special-feature").val(),
-          'checkbox-cheetos': $("#checkbox-cheetos").is(':checked'),
-          'checkbox-doritos': $("#checkbox-doritos").is(':checked'),
-          'checkbox-fritos': $("#checkbox-fritos").is(':checked'),
-          'checkbox-sunchips': $("#checkbox-sunchips").is(':checked')
-        }
+        var options = {}
+        //Add all textual values
+        $('textarea, select, [type="hidden"], [type="password"], [type="text"]').each(function(){options[$(this).attr('id')] = $(this).val();})
+        //Add all checkbox type values
+        $('[type="radio"], [type="checkbox"]').each(function(){options[$(this).attr('id')] = $(this).is(':checked');})
         return options;
       }
 
@@ -84,6 +81,12 @@
           document.location = location;
         });
 
+        //Set form values to whatever is passed in.
+        var obj = jQuery.parseJSON(decodeURIComponent(window.location.search.substring(1)));
+        for(key in obj) {
+          $("#"+[key]).val(obj[key]);
+          $("#"+[key]).val(obj[key]).slider("refresh");       
+        }
       });
     </script>
   </body>
