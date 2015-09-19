@@ -3,9 +3,10 @@
   "shortName": "Configurable",
   "longName": "Configurable",
   "companyName": "MakeAwesomeHappen",
-  "versionCode": 1,
-  "versionLabel": "1.0.0",
-  "capabilities": [ "configurable" ],
+  "versionLabel": "1.1",
+  "capabilities": [
+    "configurable"
+  ],
   "watchapp": {
     "watchface": false
   },
@@ -14,5 +15,10 @@
   },
   "resources": {
     "media": []
-  }
+  },
+  "targetPlatforms": [
+    "aplite",
+    "basalt"
+  ],
+  "sdkVersion": "3"
 }
